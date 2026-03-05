@@ -1,4 +1,4 @@
-# 📚ToBeRead
+# 📚 ToBeRead
 
 A minimal and structured web application that helps users manage and organize books into different reading stages.
 The application allows users to track reading progress, rate books, write reviews, and view reading statistics through a clean dashboard interface.
@@ -22,7 +22,7 @@ Features include:
 
 ---
 
-## 🚀Features##
+## 🚀 Features ##
 
 ### 📖 Book Management ###
 
@@ -68,7 +68,7 @@ The dashboard provides quick insights such as:
 
 ---
 
-## 🛠Technology Stack ##
+## 🛠 Technology Stack ##
 
 This project uses the following technologies:
 
@@ -93,7 +93,7 @@ This project uses the following technologies:
 
 ---
 
-## Project Structure ##
+## 📂 Project Structure ##
 
 | File / Folder     | Type   | Description                      |
 | ----------------- | ------ | -------------------------------- |
@@ -109,7 +109,7 @@ This project uses the following technologies:
 
 ---
 
-## Installation ##
+## ⚙️ Installation ##
 
 ### 1️⃣ Clone the Repository ###
 
@@ -151,7 +151,7 @@ http://localhost:3000
 
 ---
 
-## Usage ##
+## 🖥 Usage ##
 
 1. Click **Add Book**
 2. Enter the book details
@@ -164,7 +164,7 @@ The book will automatically appear in the appropriate reading shelf.
 
 ---
 
-## Future Improvements ##
+## 🔮 Future Improvements ##
 
 Planned enhancements for the project include:
 
