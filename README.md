@@ -5,7 +5,7 @@ The application allows users to track reading progress, rate books, write review
 
 ---
 
-# Overview
+## Overview ##
 
 **ToBeRead** is a browser-based reading tracker designed to demonstrate practical full-stack web development using a simple and maintainable architecture.
 
@@ -22,9 +22,9 @@ Features include:
 
 ---
 
-# 🚀Features
+## 🚀Features##
 
-## 📖 Book Management
+### 📖 Book Management ###
 
 Users can add books with the following details:
 
@@ -37,7 +37,7 @@ Users can add books with the following details:
 
 ---
 
-## 📚 Reading Shelves
+### 📚 Reading Shelves ###
 
 Books are automatically categorized into three reading stages:
 
@@ -47,7 +47,7 @@ Books are automatically categorized into three reading stages:
 
 ---
 
-## ⭐ Rating & Reviews
+### ⭐ Rating & Reviews ###
 
 Users can:
 
@@ -57,7 +57,7 @@ Users can:
 
 ---
 
-## 📊 Reading Statistics
+### 📊 Reading Statistics ###
 
 The dashboard provides quick insights such as:
 
@@ -68,7 +68,7 @@ The dashboard provides quick insights such as:
 
 ---
 
-# Technology Stack
+## 🛠Technology Stack ##
 
 This project uses the following technologies:
 
@@ -93,7 +93,7 @@ This project uses the following technologies:
 
 ---
 
-# Project Structure
+## Project Structure ##
 
 | File / Folder     | Type   | Description                      |
 | ----------------- | ------ | -------------------------------- |
@@ -109,9 +109,9 @@ This project uses the following technologies:
 
 ---
 
-# Installation
+## Installation ##
 
-## 1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository ###
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/toberead.git
@@ -119,7 +119,7 @@ git clone https://github.com/YOUR_USERNAME/toberead.git
 
 ---
 
-## 2️⃣ Navigate to the Project Directory
+### 2️⃣ Navigate to the Project Directory ###
 
 ```bash
 cd toberead
@@ -127,7 +127,7 @@ cd toberead
 
 ---
 
-## 3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies ###
 
 ```bash
 npm install
@@ -135,7 +135,7 @@ npm install
 
 ---
 
-## 4️⃣ Run the Server
+### 4️⃣ Run the Server ###
 
 ```bash
 node server.js
@@ -143,7 +143,7 @@ node server.js
 
 ---
 
-## 5️⃣ Open in Browser
+### 5️⃣ Open in Browser ###
 
 ```bash
 http://localhost:3000
@@ -151,7 +151,7 @@ http://localhost:3000
 
 ---
 
-# Usage
+## Usage ##
 
 1. Click **Add Book**
 2. Enter the book details
@@ -164,7 +164,7 @@ The book will automatically appear in the appropriate reading shelf.
 
 ---
 
-# Future Improvements
+## Future Improvements ##
 
 Planned enhancements for the project include:
 
