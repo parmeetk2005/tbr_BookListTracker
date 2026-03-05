@@ -1,0 +1,5 @@
+books.db
+books.db-shm
+books.db-wal
+node_modules/
+.env
