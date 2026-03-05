@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Track your reading journey — organize books you want to read, are reading, and have finished with ratings and stats.">
+    <title>ToBeRead — Book Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <h1>ToBeRead</h1>
+            </div>
+            <p class="tagline">Your personal reading journey</p>
+            <button id="add-book-btn" class="btn-primary">
+                <span>+</span> Add Book
+            </button>
+        </div>
+    </header>
+
+    <!-- Stats Dashboard -->
+    <section id="stats-dashboard">
+        <div class="stats-grid">
+            <div class="stat-card stat-finished">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <span class="stat-number" id="stat-finished">0</span>
+                    <span class="stat-label">Finished this year</span>
+                </div>
+            </div>
+            <div class="stat-card stat-rating">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <span class="stat-number" id="stat-avg-rating">0</span>
+                    <span class="stat-label">Average rating</span>
+                </div>
+            </div>
+            <div class="stat-card stat-reading">
+                <div class="stat-icon">📖</div>
+                <div class="stat-info">
+                    <span class="stat-number" id="stat-reading">0</span>
+                    <span class="stat-label">Currently reading</span>
+                </div>
+            </div>
+            <div class="stat-card stat-genres">
+                <div class="stat-icon">📂</div>
+                <div class="stat-info">
+                    <span class="stat-label">Top Genres</span>
+                    <span class="stat-genres-list" id="stat-genres">—</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Columns -->
+    <main id="board">
+        <div class="column" data-status="want_to_read" id="col-want-to-read">
+            <div class="column-header">
+                <span class="column-icon">📋</span>
+                <h2>Want to Read</h2>
+                <span class="book-count" id="count-want-to-read">0</span>
+            </div>
+            <div class="card-list" id="list-want-to-read"></div>
+        </div>
+        <div class="column" data-status="reading" id="col-reading">
+            <div class="column-header">
+                <span class="column-icon">📖</span>
+                <h2>Reading</h2>
+                <span class="book-count" id="count-reading">0</span>
+            </div>
+            <div class="card-list" id="list-reading"></div>
+        </div>
+        <div class="column" data-status="finished" id="col-finished">
+            <div class="column-header">
+                <span class="column-icon">✅</span>
+                <h2>Finished</h2>
+                <span class="book-count" id="count-finished">0</span>
+            </div>
+            <div class="card-list" id="list-finished"></div>
+        </div>
+    </main>
+
+    <!-- Add Book Modal -->
+    <div class="modal-overlay" id="add-modal-overlay">
+        <div class="modal" id="add-modal">
+            <button class="modal-close" id="add-modal-close">&times;</button>
+            <h2>Add a New Book</h2>
+            <form id="add-book-form">
+                <div class="form-group">
+                    <label for="book-title">Title</label>
+                    <input type="text" id="book-title" placeholder="Enter book title" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-author">Author</label>
+                    <input type="text" id="book-author" placeholder="Enter author name" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-genre">Genre</label>
+                    <select id="book-genre">
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Self-Help">Self-Help</option>
+                        <option value="History">History</option>
+                        <option value="Philosophy">Philosophy</option>
+                        <option value="Poetry">Poetry</option>
+                        <option value="Horror">Horror</option>
+                        <option value="General">General</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="book-progress">Progress</label>
+                    <select id="book-progress" required>
+                        <option value="">Select your progress</option>
+                        <option value="want_to_read">Want to Read</option>
+                        <option value="reading">Reading</option>
+                        <option value="finished">Finished</option>
+                    </select>
+                </div>
+                <div id="add-finished-fields" class="add-finished-fields">
+                    <div class="finished-divider"><span>Rate &amp; Review</span></div>
+                    <div class="star-rating" id="add-star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-book-notes">Notes (optional)</label>
+                        <textarea id="add-book-notes" placeholder="What did you think?" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Add to Shelf</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rating Modal -->
+    <div class="modal-overlay" id="rating-modal-overlay">
+        <div class="modal" id="rating-modal">
+            <button class="modal-close" id="rating-modal-close">&times;</button>
+            <h2>Rate This Book</h2>
+            <p class="rating-book-title" id="rating-book-title"></p>
+            <div class="star-rating" id="star-rating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <div class="form-group">
+                <label for="book-notes">Notes (optional)</label>
+                <textarea id="book-notes" placeholder="What did you think?" rows="3"></textarea>
+            </div>
+            <button id="save-rating-btn" class="btn-primary btn-full">Save & Finish</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
