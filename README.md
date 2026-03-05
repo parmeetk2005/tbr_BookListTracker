@@ -114,7 +114,7 @@ This project uses the following technologies:
 ### 1️⃣ Clone the Repository ###
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/toberead.git
+git clone https://github.com/parmeetk2005/tbr_BookListTracker.git
 ```
 
 ---
@@ -122,7 +122,7 @@ git clone https://github.com/YOUR_USERNAME/toberead.git
 ### 2️⃣ Navigate to the Project Directory ###
 
 ```bash
-cd toberead
+cd ToBeRead list
 ```
 
 ---
